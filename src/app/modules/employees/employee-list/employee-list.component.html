@@ -1,0 +1,33 @@
+<table class="table table-hover">
+  <tr>
+    <th>Uname</th>
+    <th>Mail</th>
+    <th>Room</th>
+    <th>Date</th>
+    <th>timeFrom</th>
+    <th>timeTo</th>
+    <th>agenda</th>
+    
+  </tr>
+  <tr *ngFor="let emp of employeeService.allEmployee">
+    <td>{{emp.uname}}</td>
+    <td>{{emp.mail}}</td>
+    <td>{{emp.room}}</td>
+    <td>{{emp.date}}</td>
+    <td>{{emp.timeFrom}}</td>
+    <td>{{emp.timeTo}}</td>
+    <td>{{emp.agenda}}</td>
+    
+    
+    <td>
+      <a class="btn text-danger" (click)="deleteEmployee(emp.id)">
+        <i class="fa fa-trash"></i>
+      </a>
+    </td>
+    <td>
+      <a class="btn" (click)="editEmployee(emp)">
+        <i class="fa fa-edit"></i>
+      </a>
+    </td>
+  </tr>
+</table>

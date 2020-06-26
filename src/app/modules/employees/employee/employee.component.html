@@ -1,0 +1,76 @@
+<div class="emp-form">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <input type="text" placeholder="UserName"   class="form-control"  [(ngModel)]="employeeService.currentEmployee.uname">
+    </div>
+    <div class="col-md-6 form-group">
+      <input type="mail" placeholder="UserMail" class="form-control" [(ngModel)]="employeeService.currentEmployee.mail">
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <label for="brow">Choose your Room*</label> 
+       <input list="browsers" placeholder="select" class="form-control" [(ngModel)]="employeeService.currentEmployee.room ">
+       
+       
+       <datalist id="browsers">
+         <option value="Room1">
+          <option value="Room2">
+            <option value="Room3">
+              <option value="Room4">
+                <option value="Room5">
+                  <option value="Room6">
+                    <option value="Room7">
+                      <option value="Room8">
+                      <option value="Room9">
+                      <option value="Room10">
+                  
+         
+       </datalist>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 form-group">
+      <input type="date" placeholder="Date*" class="form-control" [(ngModel)]="employeeService.currentEmployee.date ">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <input type="time" placeholder="TimeFrom*" class="form-control" [(ngModel)]="employeeService.currentEmployee.timeFrom ">
+    </div>
+    <div class="col-md-6 form-group">
+      <input type="time" placeholder="TimeTo*" class="form-control" [(ngModel)]="employeeService.currentEmployee.timeTo ">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 form-group">
+      <input type="text" placeholder="Agenda" class="form-control" [(ngModel)]="employeeService.currentEmployee.agenda">
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col-md-8">
+    <button class="btn btn-danger btn-lg btn-block" (click)="validNew();createEmployee(employeeService.currentEmployee)">
+      <i class="fa fa-save"></i>
+      Check Validate Date
+    </button>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <button class="btn btn-success btn-lg btn-block" (click)="createEmployee(employeeService.currentEmployee)">
+        <i class="fa fa-save"></i>
+        SAVE
+      </button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary btn-lg btn-block" (click)="clearEmployee(employeeService.currentEmployee)">
+        <i class="fa fa-retweet"></i>
+        CLEAR
+      </button>
+    </div>
+  </div>
+</div>
+<!-- <div>{{employeeService.allEmployee |json}}</div> -->
